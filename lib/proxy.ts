@@ -216,7 +216,7 @@ export class Proxy implements IProxy {
     // port 0 to get the first available port
     const listenOptions = {
       port: 0,
-      host: "0.0.0.0",
+      host: "127.0.0.1",
     };
     if (this.httpsPort && !options.hosts) {
       listenOptions.port = this.httpsPort;
@@ -487,7 +487,7 @@ export class Proxy implements IProxy {
       const conn = net.connect(
         {
           port,
-          host: "0.0.0.0",
+          host: "127.0.0.1",
           allowHalfOpen: true,
         },
 
